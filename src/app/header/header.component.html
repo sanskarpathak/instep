@@ -1,0 +1,11 @@
+<header>
+    <div>Internship Portal</div>
+    <!-- Add any other header content or navigation links here -->
+    <nav>
+        <ul>
+          <li *ngIf="isStudentDashboardActive"><a routerLink="/student-dashboard">Dashboard</a></li>
+          <li *ngIf="isStudentDashboardActive"><a routerLink="/applied-internships">Applied Internships</a></li>
+          <li *ngIf="isStudentDashboardActive"><a routerLink="/travel">Travel</a></li>
+        </ul>
+    </nav>
+</header>
