@@ -1,5 +1,4 @@
 <div>
-    <app-header></app-header>
     <div class="login-container">
     
         <h2>Login</h2>
@@ -11,6 +10,9 @@
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" [(ngModel)]="password" required>
+            </div>
+            <div> 
+                <input type="checkbox" name="isMentor" [(ngModel)]="isMentor" required> <label> Mentor Login ?</label>
             </div>
             <button type="submit">Login</button>
         </form>

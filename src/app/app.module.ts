@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { TravelComponent } from './travel/travel.component';
 import { AppliedInternshipsComponent } from './applied-internships/applied-internships.component';
+import { ManageInternshipsComponent } from './manage-internships/manage-internships.component';
+import { ManageAppliedInternshipsComponent } from './manage-applied-internships/manage-applied-internships.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { AppliedInternshipsComponent } from './applied-internships/applied-inter
     MentorDashboardComponent,
     HeaderComponent,
     TravelComponent,
-    AppliedInternshipsComponent
+    AppliedInternshipsComponent,
+    ManageInternshipsComponent,
+    ManageAppliedInternshipsComponent
   ],
   imports: [
     BrowserModule,
