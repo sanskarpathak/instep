@@ -1,11 +1,42 @@
-<header>
-    <div>Internship Portal</div>
-    <!-- Add any other header content or navigation links here -->
-    <nav>
-        <ul>
-          <li *ngIf="isStudentDashboardActive"><a routerLink="/student-dashboard">Dashboard</a></li>
-          <li *ngIf="isStudentDashboardActive"><a routerLink="/applied-internships">Applied Internships</a></li>
-          <li *ngIf="isStudentDashboardActive"><a routerLink="/travel">Travel</a></li>
-        </ul>
-    </nav>
-</header>
+<div
+  class="flex items-center justify-between bg-stone-500 text-xl text-white px-4 py-2"
+>
+  <div>
+    <img
+      src="../../assets/makethon-transparent.png"
+      alt="Internship Portal"
+      class="w-20"
+    />
+  </div>
+  <!-- Add any other header content or navigation links here -->
+  <div class="flex gap-x-4 text-base">
+    <span
+      class="hover:cursor-pointer bg-stone-800 bg-opacity-30 p-2 px-4 rounded-md hover:bg-opacity-50"
+      *ngIf="isStudentDashboardActive"
+      routerLink="/student-dashboard"
+    >
+      Dashboard
+    </span>
+    <span
+      *ngIf="isStudentDashboardActive"
+      routerLink="/applied-internships"
+      class="hover:cursor-pointer bg-stone-800 bg-opacity-30 p-2 px-4 rounded-md hover:bg-opacity-50"
+    >
+      Applied Internships
+    </span>
+    <span
+      routerLink="/travel"
+      *ngIf="isStudentDashboardActive"
+      class="hover:cursor-pointer hover:bg-opacity-50 bg-stone-800 bg-opacity-30 p-2 px-4 rounded-md"
+    >
+      Travel
+    </span>
+    <span
+      routerLink="/mentor-dashboard"
+      *ngIf="isStudentDashboardActive"
+      class="hover:cursor-pointer hover:bg-opacity-50 bg-stone-800 bg-opacity-30 p-2 px-4 rounded-md"
+    >
+      Mentor Dashboard
+    </span>
+  </div>
+</div>

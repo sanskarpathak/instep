@@ -1,30 +1,29 @@
-<app-header></app-header>
-<div class="dashboard">
-    <h2>Welcome to the Student Dashboard</h2>
-    <h3>Filter Internships</h3>
-    <div class="filter-container">
-        <label for="duration">Duration:</label>
-        <select id="duration" name="duration" [(ngModel)]="selectedDuration">
-            <option value="">All</option>
-            <option value="3 months">3 months</option>
-            <option value="2 months">2 months</option>
-        </select>
-        <button (click)="filterInternships()">Apply Filter</button>
-        
-    </div>
+<div class="dashboard bg-stone-200">
+  <h2>Welcome to the Student Dashboard</h2>
+  <p class="text-lg font-bold">Filter Internships</p>
+  <div class="filter-container flex gap-x-2 bg-stone-100 p-4">
+    <label for="duration">Duration:</label>
+    <select id="duration" name="duration" [(ngModel)]="selectedDuration">
+      <option value="">All</option>
+      <option value="3 months">3 months</option>
+      <option value="2 months">2 months</option>
+    </select>
+    <button class="" (click)="filterInternships()">Apply Filter</button>
+  </div>
 
-    
-
-    <h3>Available Internships</h3>
-    <div class="internship-list">
-        <div *ngFor="let internship of filteredInternships" class="internship-card">
-            <h4>Project ID: {{ internship.projectId }}</h4>
-            <p>Description: {{ internship.description }}</p>
-            <p>Skills Gained: {{ internship.skillsGain }}</p>
-            <p>Prerequisite: {{ internship.prerequisite }}</p>
-            <p>Duration: {{ internship.duration }}</p>
-            <p>Mentor Email: {{ internship.mentorEmail }}</p>
-            <button (click)="applyForInternship(internship.projectId)">Apply</button>
-        </div>
+  <!-- <h3>Available Internships</h3> -->
+  <div class="internship-list grid grid-rows-1 grid-cols-3 gap-4 p-2">
+    <div
+      *ngFor="let internship of filteredInternships"
+      class="internship-card p-4 rounded-md bg-stone-300"
+    >
+      <h4>Project ID: {{ internship.projectId }}</h4>
+      <p>Description: {{ internship.description }}</p>
+      <p>Skills Gained: {{ internship.skillsGain }}</p>
+      <p>Prerequisite: {{ internship.prerequisite }}</p>
+      <p>Duration: {{ internship.duration }}</p>
+      <p>Mentor Email: {{ internship.mentorEmail }}</p>
+      <button (click)="applyForInternship(internship.projectId)">Apply</button>
     </div>
+  </div>
 </div>
