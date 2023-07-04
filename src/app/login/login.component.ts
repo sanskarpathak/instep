@@ -4,12 +4,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  username!: string ;
-  password!: string ;
-
+  username!: string;
+  password!: string;
+  isMentor: boolean = false;
 
   constructor(private router: Router) {}
 
