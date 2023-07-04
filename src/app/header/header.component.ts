@@ -9,7 +9,7 @@ import { NavigationEnd, Router } from '@angular/router';
 export class HeaderComponent {
   isStudentDashboardActive: boolean = false;
   isMentorDashbordActive: boolean = false;
-  mentorFeatures:string[]=['mentor-dashboard','manage-internships','manage-applied-internships']
+  mentorFeatures:string[]=['mentor-dashboard','manage-internships','manage-claims']
   studentFeatures:string[]=['student-dashboard','travel','applied-internships']
   constructor(private router: Router) {}
   ngOnInit() {

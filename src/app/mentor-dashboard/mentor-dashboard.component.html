@@ -1,1 +1,31 @@
-<p>mentor-dashboard works!</p>
+<div class="header"> Manage Applied Internships </div>
+<table class="main-table">
+      <tr>
+        <th>Email</th>
+        <th>Project ID</th>
+        <th>Description</th>
+        <th>Student CGPA</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let internship of internships">
+        <td>{{ internship['student email'] }}</td>
+        <td>{{ internship['project Id'] }}</td>
+        <td>{{ internship.Description }}</td>
+        <td>{{ internship['Student CGPA'] }}</td>
+        <td>
+            <div class="actionButtons">
+                <button class="btn" (click)="setIntershipStatus('approve')">Approve</button>
+                <button class="btn" (click)="setIntershipStatus('reject')">Reject</button>
+                <button class="btn" (click)="scheduleInterview(internship)">Schedule Interview</button>
+            </div>
+        </td>
+      </tr>
+  </table>
+  
+  
+  
+  
+  
+  
+  
+  

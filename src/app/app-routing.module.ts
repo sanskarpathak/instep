@@ -6,7 +6,8 @@ import { MentorDashboardComponent } from './mentor-dashboard/mentor-dashboard.co
 import { TravelComponent } from './travel/travel.component';
 import { ManageInternshipsComponent } from './manage-internships/manage-internships.component';
 import { AppliedInternshipsComponent } from './applied-internships/applied-internships.component';
-import { ManageAppliedInternshipsComponent } from './manage-applied-internships/manage-applied-internships.component';
+import { ManageClaimsComponent } from './manage-claims/manage-claims.component';
+import { SignupPageComponent } from './signup-page/signup-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'travel', component: TravelComponent },
   { path: 'manage-internships', component: ManageInternshipsComponent },
   { path: 'applied-internships', component: AppliedInternshipsComponent },
-  { path: 'manage-applied-internships', component: ManageAppliedInternshipsComponent }
+  { path: 'manage-claims', component: ManageClaimsComponent },
+  { path: 'signup', component: SignupPageComponent }
 ];
 
 @NgModule({

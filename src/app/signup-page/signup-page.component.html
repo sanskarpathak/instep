@@ -1,0 +1,79 @@
+<div class="header"> Sign Up ! </div>
+<form [formGroup]="signupForm" (ngSubmit)="signup()" class="signup-form">
+    <div class="form-input">
+        <div>
+            <label>First Name:</label>
+            <input type="text" formControlName="firstName" required>
+        </div>
+        <div>
+            <label>Last Name:</label>
+            <input type="text" formControlName="lastName" required>
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="email" formControlName="email" required>
+            <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched" class="error-message">
+                <small>Please enter a valid email.</small>
+            </div>
+        </div>
+        <div>
+            <label>Date of Birth:</label>
+            <input type="date" formControlName="dob" required>
+        </div>
+        <div>
+            <label>Phone Number:</label>
+            <input type="tel" formControlName="phoneNumber" required>
+            <div *ngIf="signupForm.get('phoneNumber')?.invalid && signupForm.get('phoneNumber')?.touched"
+                class="error-message">
+                <small>Please enter a valid phone number.</small>
+            </div>
+        </div>
+        <div>
+            <label>Address Line 1:</label>
+            <input type="text" formControlName="addressLine1" required>
+        </div>
+        <div>
+            <label>Address Line 2:</label>
+            <input type="text" formControlName="addressLine2">
+        </div>
+        <div>
+            <label>State:</label>
+            <input type="text" formControlName="state" required>
+        </div>
+        <div>
+            <label>City:</label>
+            <input type="text" formControlName="city" required>
+        </div>
+        <div>
+            <label>Country:</label>
+            <input type="text" formControlName="country" required>
+        </div>
+        <div>
+            <label>Highest Level of Study:</label>
+            <select formControlName="educationLevel" required>
+                <option value="">Select an option</option>
+                <option value="Under 12th Pass">Under 12th Pass</option>
+                <option value="Under Graduate">Under Graduate</option>
+                <option value="Post Graduate">Post Graduate</option>
+            </select>
+        </div>
+        <div>
+            <label>College Name:</label>
+            <input type="text" formControlName="collegeName">
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" formControlName="password" required>
+            <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched"
+                class="error-message">
+                <small>Password must be at least 6 characters long.</small>
+            </div>
+        </div>
+        <div>
+            <label>Confirm Password:</label>
+            <input type="password" formControlName="confirmPassword" required>
+        </div>
+        
+    </div>
+    <button type="submit" [disabled]="signupForm.invalid" class="submit-button">Sign Up</button>
+</form>
