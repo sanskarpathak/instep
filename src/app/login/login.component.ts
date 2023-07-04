@@ -17,9 +17,9 @@ export class LoginComponent {
     // Perform authentication logic here
     // For simplicity, let's assume successful login
     if (this.username === 'student' && this.password === 'password') {
-      this.router.navigate(['/student-dashboard']);
+      if (!this.isMentor) this.router.navigate(['/student-dashboard']);
     } else if (this.username === 'mentor' && this.password === 'password') {
-      this.router.navigate(['/mentor-dashboard']);
+      if (this.isMentor) this.router.navigate(['/mentor-dashboard']);
     } else {
       alert('Invalid username or password');
     }

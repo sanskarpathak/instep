@@ -1,0 +1,49 @@
+.header{
+    font-size: 140%;
+    font-weight: bold;
+    height: 48px;
+    background: lightgray;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 0.8%;
+    padding-right: 0.8%;
+    margin: 10px 0px;
+}
+
+.main-table{
+    width:100%;
+    margin: 20px 0;
+    background:#FFFFFF;
+    box-shadow : 0px 0px 6px 1px #00000029;
+    border-radius: 6px;
+}
+
+
+th{
+    text-align: center;
+    background: #2E8BC926;
+    border-radius: 4px 4px 0px 0px;
+    font : normal normal 500 18px/19px ;
+    color : #000000;
+    padding: 10px;
+}
+
+td{
+    text-align: center;
+    font :  18px/19px ;
+    color : #000000;
+    padding: 10px;
+}
+
+.actionButtons{
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+}
+
+.btn{
+    background-color: aquamarine;
+}

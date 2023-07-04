@@ -9,6 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { TravelComponent } from './travel/travel.component';
 import { AppliedInternshipsComponent } from './applied-internships/applied-internships.component';
+import { ManageInternshipsComponent } from './manage-internships/manage-internships.component';
+import { ManageClaimsComponent } from './manage-claims/manage-claims.component';
+import { SignupPageComponent } from './signup-page/signup-page.component';
+import { ScheduleInterviewComponent } from './schedule-interview/schedule-interview.component';
 
 @NgModule({
   imports: [ReactiveFormsModule, BrowserModule, AppRoutingModule, FormsModule],

@@ -1,42 +1,36 @@
-<div
-  class="flex items-center justify-between bg-stone-500 text-xl text-white px-4 py-2"
->
+<div class="flex items-center justify-between bg-stone-500 text-xl text-white px-4 py-2">
   <div>
-    <img
-      src="../../assets/makethon-transparent.png"
-      alt="Internship Portal"
-      class="w-20"
-    />
+    <img src="../../assets/makethon-transparent.png" alt="Internship Portal" class="w-20" />
   </div>
   <!-- Add any other header content or navigation links here -->
   <div class="flex gap-x-4 text-base">
-    <span
-      class="hover:cursor-pointer bg-stone-800 bg-opacity-30 p-2 px-4 rounded-md hover:bg-opacity-50"
-      *ngIf="isStudentDashboardActive"
-      routerLink="/student-dashboard"
-    >
+    <!-- Student Dashboard -->
+    <span class="hover:cursor-pointer bg-stone-800 bg-opacity-30 p-2 px-4 rounded-md hover:bg-opacity-50"
+      *ngIf="isStudentDashboardActive" routerLink="/student-dashboard">
       Dashboard
     </span>
-    <span
-      *ngIf="isStudentDashboardActive"
-      routerLink="/applied-internships"
-      class="hover:cursor-pointer bg-stone-800 bg-opacity-30 p-2 px-4 rounded-md hover:bg-opacity-50"
-    >
+    <span *ngIf="isStudentDashboardActive" routerLink="/applied-internships"
+      class="hover:cursor-pointer bg-stone-800 bg-opacity-30 p-2 px-4 rounded-md hover:bg-opacity-50">
       Applied Internships
     </span>
-    <span
-      routerLink="/travel"
-      *ngIf="isStudentDashboardActive"
-      class="hover:cursor-pointer hover:bg-opacity-50 bg-stone-800 bg-opacity-30 p-2 px-4 rounded-md"
-    >
+    <span routerLink="/travel" *ngIf="isStudentDashboardActive"
+      class="hover:cursor-pointer hover:bg-opacity-50 bg-stone-800 bg-opacity-30 p-2 px-4 rounded-md">
       Travel
     </span>
-    <span
-      routerLink="/mentor-dashboard"
-      *ngIf="isStudentDashboardActive"
-      class="hover:cursor-pointer hover:bg-opacity-50 bg-stone-800 bg-opacity-30 p-2 px-4 rounded-md"
-    >
-      Mentor Dashboard
+
+
+    <!-- Mentor Dashboard  -->
+    <span class="hover:cursor-pointer bg-stone-800 bg-opacity-30 p-2 px-4 rounded-md hover:bg-opacity-50"
+      *ngIf="isMentorDashbordActive" routerLink="/mentor-dashboard">
+      Dashboard
+    </span>
+    <span *ngIf="isMentorDashbordActive" routerLink="/manage-claims"
+      class="hover:cursor-pointer bg-stone-800 bg-opacity-30 p-2 px-4 rounded-md hover:bg-opacity-50">
+      Manage Claims
+    </span>
+    <span routerLink="/manage-internships" *ngIf="isMentorDashbordActive"
+      class="hover:cursor-pointer hover:bg-opacity-50 bg-stone-800 bg-opacity-30 p-2 px-4 rounded-md">
+      Manage Internships
     </span>
   </div>
 </div>
